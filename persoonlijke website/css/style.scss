@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero{
+    background-image: url('../afbeeldingen/sky.JPG');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: RGBA(186,136,136, 0.5);
+    position: relative;
+    nav{
+        display: flex;
+        justify-content: space-around;
+        .hamburger{
+            margin: 30px 0;
+            .menu{
+                text-decoration: none;
+                color: #000000;
+            }
+        }   
+    }
+    .navbar-side{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: -81vw;
+        top: 0;
+        background-color: RGBA(167,104,104);
+        min-width: 80vw;
+        min-height: 100vh;
+        border: 1px solid black;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            min-height: 10vh;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: RGBA(0,0,0);
+            border-bottom: 1px solid black;
+        } 
+        a:hover{
+            color: RGBA(136,186,186);
+        }
+    }
+    .active{
+        right: 0;
+    }
+    .close{
+        display: flex;
+        justify-content: flex-end;
+        a{
+            padding-right: 30px;
+            border: none;
+        }
+    }
+}
+
+.container{
+    min-width: 80vw;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    .welcome{
+        margin: 0 20px;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        a.button{
+            text-decoration: none;
+            text-align: center;
+            color: RGBA(255,255,255);
+            border-radius: 8px;
+            background-color: RGBA(136,186,186);
+            padding: 1%;
+            margin-top: 1%;
+            width: 30%;
+        }
+    }  
+}
+
+
+
