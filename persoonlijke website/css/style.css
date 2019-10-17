@@ -5,7 +5,7 @@
 }
 
 .hero {
-  background-image: url("../afbeeldingen/sky.JPG");
+  background-image: url("../afbeeldingen/bg.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -40,7 +40,7 @@ header nav .hamburger .menu {
   color: #000000;
 }
 
-header .navbar-side {
+.navbar-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,15 +49,15 @@ header .navbar-side {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  right: -81vw;
+  right: -100vw;
   top: 0;
   background-color: RGBA(167, 104, 104);
-  min-width: 80vw;
-  min-height: 100vh;
+  min-width: 100vw;
+  min-height: 50vh;
   border: 1px solid black;
 }
 
-header .navbar-side a {
+.navbar-side a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,15 +75,15 @@ header .navbar-side a {
   border-bottom: 1px solid black;
 }
 
-header .navbar-side a:hover {
+.navbar-side a:hover {
   color: RGBA(136, 186, 186);
 }
 
-header .active {
+.active {
   right: 0;
 }
 
-header .close {
+.close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +92,7 @@ header .close {
           justify-content: flex-end;
 }
 
-header .close a {
+.close a {
   padding-right: 30px;
   border: none;
 }
@@ -113,7 +113,7 @@ header .close a {
           align-items: center;
 }
 
-.container .welcome {
+.welcome {
   margin: 0 20px;
   min-height: 100px;
   display: -webkit-box;
@@ -127,7 +127,11 @@ header .close a {
       justify-content: space-around;
 }
 
-.container .welcome a.button {
+.button {
+  padding-top: 20px;
+}
+
+.button a {
   text-decoration: none;
   text-align: center;
   color: RGBA(255, 255, 255);
