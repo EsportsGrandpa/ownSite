@@ -117,17 +117,50 @@ header{
         align-items: center; 
     .wrapper{
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         .presentation{
             margin: 20px 0;
             h1{
                 text-align: center;
+                color: RGBA(186,136,136, 0.5);
             }
             h3{
                 text-align: center;
+                font-size: 1em;
+                color: RGBA(136,186,186, 0.6);
+            }
+            hr{
+                margin-top: 20px;
+            }
+        }
+        .core{
+            .left-text{
+                text-align: center;
+                p{
+                    font-size: 0.9em;
+                }
+            }
+            .linkedinPict{
+                margin: 20px 0;
+                text-align: center;
+                img{
+                    border-radius: 50%;
+                    max-width: 50%;
+                    height: auto;
+                }
+            }
+            .right-text{
+                text-align: center;
+                h4{
+                    color: RGBA(136,186,186, 0.6);
+                }
             }
         }
     }
 }
+
+
 
 
 

@@ -180,6 +180,13 @@ header .container nav .hamburger .menu {
 
 .container .wrapper {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container .wrapper .presentation {
@@ -188,9 +195,43 @@ header .container nav .hamburger .menu {
 
 .container .wrapper .presentation h1 {
   text-align: center;
+  color: RGBA(186, 136, 136, 0.5);
 }
 
 .container .wrapper .presentation h3 {
   text-align: center;
+  font-size: 1em;
+  color: RGBA(136, 186, 186, 0.6);
+}
+
+.container .wrapper .presentation hr {
+  margin-top: 20px;
+}
+
+.container .wrapper .core .left-text {
+  text-align: center;
+}
+
+.container .wrapper .core .left-text p {
+  font-size: 0.9em;
+}
+
+.container .wrapper .core .linkedinPict {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container .wrapper .core .linkedinPict img {
+  border-radius: 50%;
+  max-width: 50%;
+  height: auto;
+}
+
+.container .wrapper .core .right-text {
+  text-align: center;
+}
+
+.container .wrapper .core .right-text h4 {
+  color: RGBA(136, 186, 186, 0.6);
 }
 /*# sourceMappingURL=style.css.map */
