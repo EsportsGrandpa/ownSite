@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
@@ -32,14 +34,14 @@
                 <div class="close">
                     <a href="#" class="larger"><i class="fas fa-times"></i></a>
                 </div>
-                <a href="#page1">Home</a>
-                <a href="#page2">Who Am I</a>
+                <a href="#page1">Who Am I</a>
+                <a href="#page2">Resume</a>
                 <a href="#page3">Templates</a>
                 <a href="#page4">Contact</a>
             </div>
         </header>
 
-        <div class="container" id="#page1">
+        <div class="container">
             <div class="welcome">
                 <h1>Matthias Boeckaert</h1>
                 <h2>Online Resume</h2>
@@ -50,7 +52,7 @@
         </div>
     </div>
 
-    <div class="container" id="#page2">
+    <div class="container" id="page1">
         <div class="wrapper">
             <div class="presentation">
                 <h1>Who am I?</h1>
@@ -69,8 +71,10 @@
                 <section class="right-text">
                     <h4>Name:</h4>
                     <p>Matthias Boeckaert </p>
-                    <h4>Age:</h4>
-                    <p>28 years </p>
+                    <div class="text-margin">
+                        <h4>Age:</h4>
+                        <p>28 years </p>
+                    </div>
                     <h4>Location:</h4>
                     <p>Oordegem, Lede </p>
                 </section>
@@ -78,9 +82,94 @@
         </div>
     </div>
 
+    <div class="container" id="page2">
+        <div class="resume">
+            <h1>Resume</h1>
+            <div class="skillset">
+                <h2>Skills</h2>
+                <li>
+                    <span class="skill">HTML(5)</span>
+                    <span>3.5/5</span>
+                </li>
+                <li>
+                    <span class="skill">CSS(3)</span>
+                    <span>3.5/5</span>
+                </li>
+                <li>
+                    <span class="skill">WordPress</span>
+                    <span class="skill-score">3/5</span>
+                </li>
+                <li>
+                    <span class="skill">SASS</span>
+                    <span class="skill-score">3/5</span>
+                </li>
+                <li>
+                    <span class="skill">Bootstrap</span>
+                    <span class="skill-score">2.5/5</span>
+                </li>
+                <li>
+                    <span class="skill">CSS Grid</span>
+                    <span class="skill-score">2.5/5</span>
+                </li>
+                <li>
+                    <span class="skill">Javascript</span>
+                    <span class="skill-score">2/5</span>
+                </li>
+                <li>
+                    <span class="skill">jQuery</span>
+                    <span class="skill-score">2/5</span>
+                </li>
+                <li>
+                    <span class="skill">Php</span>
+                    <span class="skill-score">1/5</span>
+                </li>
+                <li>
+                    <span class="skill">Python</span>
+                    <span class="skill-score">1/5</span>
+                </li>
+            </div>
+            <div class="skillset">
+                <h2>Language</h2>
+                <li>
+                    <span>Dutch</span>
+                    <span>Mothertongue</span>
+                </li>
+                <li>
+                    <span>English</span>
+                    <span>Very Good</span>
+                </li>
+                <li>
+                    <span>French</span>
+                    <span>Good</span>
+                </li>
+                <li>
+                    <span>German</span>
+                    <span>Notion</span>
+                </li>
+            </div>
+            <div class="skillset">
+                <h2>Experience</h2>
+                <li>
+                    <span>Jet-Import</span>
+                    <span>2018 - 2019</span>
+                </li>
+                <li>
+                    <span>Coca-Cola Ent.</span>
+                    <span>2015 - 2018</span>
+                </li>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

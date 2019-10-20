@@ -92,6 +92,7 @@ header .container nav .hamburger .menu {
   min-height: 10vh;
   text-decoration: none;
   text-transform: uppercase;
+  color: RGBA(255, 255, 255);
   border-bottom: 1px solid #FFFF;
 }
 
@@ -157,7 +158,7 @@ header .container nav .hamburger .menu {
   text-decoration: none;
   text-align: center;
   border-radius: 8px;
-  background-color: RGBA(136, 186, 186, 0.6);
+  background-color: RGBA(136, 186, 186);
   padding: 1%;
   margin-top: 1%;
   width: 30%;
@@ -233,5 +234,21 @@ header .container nav .hamburger .menu {
 
 .container .wrapper .core .right-text h4 {
   color: RGBA(136, 186, 186, 0.6);
+}
+
+.container .wrapper .core .right-text .text-margin {
+  margin: 10px 0;
+}
+
+.resume {
+  min-height: 100vh;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */
