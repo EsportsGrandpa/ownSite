@@ -4,6 +4,18 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  margin: 0.33em 0;
+  text-align: center;
+  color: RGBA(186, 136, 136, 0.5);
+}
+
+h3 {
+  text-align: center;
+  font-size: 1em;
+  color: RGBA(136, 186, 186, 0.6);
+}
+
 .hero {
   background-image: url("../afbeeldingen/sky.jpg");
   background-size: cover;
@@ -51,6 +63,19 @@ header .container nav {
 
 header .container nav .me {
   margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container nav .me h1 {
+  color: #000000;
 }
 
 header .container nav .hamburger {
@@ -150,6 +175,15 @@ header .container nav .hamburger .menu {
   margin-top: 10%;
 }
 
+.container .welcome h1 {
+  color: #000000;
+  text-align: left;
+}
+
+.container .welcome h2 {
+  font-size: 1.33em;
+}
+
 .button {
   padding-top: 20px;
 }
@@ -188,25 +222,15 @@ header .container nav .hamburger .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
 }
 
 .container .wrapper .presentation {
-  margin: 20px 0;
-}
-
-.container .wrapper .presentation h1 {
-  text-align: center;
-  color: RGBA(186, 136, 136, 0.5);
-}
-
-.container .wrapper .presentation h3 {
-  text-align: center;
-  font-size: 1em;
-  color: RGBA(136, 186, 186, 0.6);
+  margin: 5% 0;
 }
 
 .container .wrapper .presentation hr {
-  margin-top: 20px;
+  margin: 5% 0;
 }
 
 .container .wrapper .core .left-text {
@@ -240,6 +264,10 @@ header .container nav .hamburger .menu {
   margin: 10px 0;
 }
 
+.newBckgrColor {
+  background: #F5F2E6;
+}
+
 .resume {
   min-height: 100vh;
   min-width: 100%;
@@ -250,5 +278,21 @@ header .container nav .hamburger .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.resume li {
+  list-style-type: none;
+}
+
+.resume li .skill-score {
+  float: right;
+}
+
+.resume li .langGrade {
+  float: right;
+}
+
+.resume li .textOpmaak {
+  font-size: 0.66em;
 }
 /*# sourceMappingURL=style.css.map */

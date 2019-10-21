@@ -4,7 +4,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+h1{
+    margin: 0.33em 0;
+    text-align: center;
+    color: RGBA(186,136,136, 0.5);
+}
 
+h3{
+    text-align: center;
+    font-size: 1em;
+    color: RGBA(136,186,186, 0.6);
+}
 
 .hero{
     background-image: url('../afbeeldingen/sky.jpg');
@@ -31,6 +41,12 @@ header{
             margin: 0 auto;
             .me{
                 margin: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1{
+                    color: #000000;
+                }
             }
             .hamburger{
                 margin: 30px 50px;
@@ -93,6 +109,13 @@ header{
         display: flex;
         flex-direction: column;
         margin-top: 10%;
+        h1{
+            color: #000000;
+            text-align: left;
+        }
+        h2{
+            font-size: 1.33em;
+        }
     }  
 }
 
@@ -120,19 +143,11 @@ header{
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
         .presentation{
-            margin: 20px 0;
-            h1{
-                text-align: center;
-                color: RGBA(186,136,136, 0.5);
-            }
-            h3{
-                text-align: center;
-                font-size: 1em;
-                color: RGBA(136,186,186, 0.6);
-            }
+            margin: 5% 0;
             hr{
-                margin-top: 20px;
+                margin: 5% 0;
             }
         }
         .core{
@@ -164,11 +179,27 @@ header{
     }
 }
 
+.newBckgrColor{
+    background: #F5F2E6;
+}
+
 .resume{
     min-height: 100vh;
     min-width: 100%;
     display: flex;
     flex-direction: column;
+    li{
+        list-style-type: none;
+        .skill-score{
+            float: right;
+        }
+        .langGrade{
+            float: right;
+        }
+        .textOpmaak{
+            font-size: 0.66em;
+        }
+    }
 }
 
 
