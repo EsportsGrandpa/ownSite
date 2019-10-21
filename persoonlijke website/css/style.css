@@ -295,4 +295,32 @@ header .container nav .hamburger .menu {
 .resume li .textOpmaak {
   font-size: 0.66em;
 }
+
+.allPictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.allPictures .box {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.allPictures .box .imgOfHead {
+  padding: 2%;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.allPictures .box:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
 /*# sourceMappingURL=style.css.map */
