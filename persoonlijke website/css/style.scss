@@ -4,6 +4,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+@mixin container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
 h1{
     margin: 0.33em 0;
     text-align: center;
@@ -18,6 +23,7 @@ h3{
 
 .hero{
     background-image: url('../afbeeldingen/sky.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,39 +31,37 @@ h3{
     flex-direction: column;
 }
 
-header{
-    background-color: RGBA(186,136,136, 0.5);
-    position: relative;
-    .container{
-        min-width: 70vw;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;  
-        nav{
-            display: flex;
-            justify-content: space-between;
-            min-width: 70vw;
-            margin: 0 auto;
-            .me{
-                margin: 0 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h1{
-                    color: #000000;
-                }
-            }
-            .hamburger{
-                margin: 30px 50px;
-                .menu{
-                    text-decoration: none;
-                    color: #000000;
-                }
-            }   
-        }
-    }   
+.welcome{
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 80vh;
+    h1{
+        color: #000000;
+        text-transform: uppercase;
+    }
+    h2{
+        font-size: 1.33em;
+        text-align: center;
+    }
+} 
+
+.hamburgerMenu{
+   display: flex;
+   justify-content: flex-end;
+   position: sticky;
+   top: 0;
+    .hamburger{
+        margin-right: 5%;
+        margin-top: 5%;
+        text-decoration: none;
+        color: #000000;
+    } 
 }
+   
+
 .navbar-side{
     display: flex;
     flex-direction: column;
@@ -97,83 +101,41 @@ header{
     }
 }
 
-.container{
-        min-width: 70vw;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-    .welcome{
-        margin: 0 20px;
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10%;
-        h1{
-            color: #000000;
-            text-align: left;
-        }
-        h2{
-            font-size: 1.33em;
-        }
-    }  
-}
-
-
-.button{
-    padding-top: 20px;
-    a{
-        text-decoration: none;
-        text-align: center;
-        border-radius: 8px;
-        background-color: RGBA(136,186,186);
-        padding: 1%;
-        margin-top: 1%;
-        width: 30%;
-    }
-}
-
-.container{
-        max-width: 70vw;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-    .wrapper{
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        .presentation{
+.whoAmI{
+    @include container;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .presentation{
+        margin: 5% 0;
+        hr{
             margin: 5% 0;
-            hr{
-                margin: 5% 0;
+       }
+    }
+    .core{
+        .left-text{
+            text-align: center;
+            p{
+                font-size: 0.9em;
             }
         }
-        .core{
-            .left-text{
-                text-align: center;
-                p{
-                    font-size: 0.9em;
-                }
+        .linkedinPict{
+        margin: 20px 0;
+            text-align: center;
+            img{
+                border-radius: 50%;
+                max-width: 50%;
+                height: auto;
             }
-            .linkedinPict{
-                margin: 20px 0;
-                text-align: center;
-                img{
-                    border-radius: 50%;
-                    max-width: 50%;
-                    height: auto;
-                }
+        }
+        .right-text{
+            text-align: center;
+            h4{
+                color: RGBA(136,186,186, 0.6);
             }
-            .right-text{
-                text-align: center;
-                h4{
-                    color: RGBA(136,186,186, 0.6);
-                }
-                .text-margin{
-                    margin: 10px 0;
-                }
+            .text-margin{
+                margin: 10px 0;
             }
         }
     }
@@ -184,8 +146,8 @@ header{
 }
 
 .resume{
+    @include container;
     min-height: 100vh;
-    min-width: 100%;
     display: flex;
     flex-direction: column;
     li{
@@ -202,45 +164,38 @@ header{
     }
 }
 
-.allPictures{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    .box{
-        margin: 0 auto;
-        overflow: hidden;
-        .imgOfHead{
-            padding: 2%;
-            max-width: 100%;
-            height: auto;
-            transition: transform .5s ease;
-        }
-    }
-    .box:hover img{
-        transform: scale(1.5);
-    }
-}
-
-
-.container{
-    max-width: 70vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    .formWrapper{
-        height: 100vh;
-        margin: 0 auto;
-        form{
-            display: flex;
-            flex-direction: column;
-            .submit{
-                max-width: 50%;
-                margin: 5% auto;
+.templates{
+    @include container;
+    .allPictures{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        .box{
+            margin: 0 auto;
+            overflow: hidden;
+            .imgOfHead{
+                padding: 2%;
+                max-width: 100%;
+                height: auto;
+                transition: transform .5s ease;
             }
         }
+        .box:hover img{
+            transform: scale(1.5);
+        }
     }
 }
-
-
-
+ 
+.formWrapper{
+    @include container;
+    height: 100vh;
+   margin: 0 auto;
+    form{
+        display: flex;
+        flex-direction: column;
+        .submit{
+            max-width: 50%;
+            margin: 5% auto;
+        }
+    }
+}
