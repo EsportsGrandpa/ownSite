@@ -18,6 +18,7 @@ h3 {
 
 .hero {
   background-image: url("../afbeeldingen/sky.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -30,59 +31,50 @@ h3 {
           flex-direction: column;
 }
 
-header {
-  background-color: RGBA(186, 136, 136, 0.5);
-  position: relative;
-}
-
-header .container {
-  min-width: 70vw;
+.welcome {
+  width: 70vw;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .container nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-width: 70vw;
-  margin: 0 auto;
-}
-
-header .container nav .me {
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 80vh;
 }
 
-header .container nav .me h1 {
+.welcome h1 {
   color: #000000;
+  text-transform: uppercase;
 }
 
-header .container nav .hamburger {
-  margin: 30px 50px;
+.welcome h2 {
+  font-size: 1.33em;
+  text-align: center;
 }
 
-header .container nav .hamburger .menu {
+.hamburgerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.hamburgerMenu .hamburger {
+  margin-right: 5%;
+  margin-top: 5%;
   text-decoration: none;
   color: #000000;
 }
@@ -147,73 +139,9 @@ header .container nav .hamburger .menu {
   border: none;
 }
 
-.container {
-  min-width: 70vw;
+.whoAmI {
+  width: 70vw;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container .welcome {
-  margin: 0 20px;
-  min-height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 10%;
-}
-
-.container .welcome h1 {
-  color: #000000;
-  text-align: left;
-}
-
-.container .welcome h2 {
-  font-size: 1.33em;
-}
-
-.button {
-  padding-top: 20px;
-}
-
-.button a {
-  text-decoration: none;
-  text-align: center;
-  border-radius: 8px;
-  background-color: RGBA(136, 186, 186);
-  padding: 1%;
-  margin-top: 1%;
-  width: 30%;
-}
-
-.container {
-  max-width: 70vw;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container .wrapper {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,42 +153,42 @@ header .container nav .hamburger .menu {
   margin: 0 auto;
 }
 
-.container .wrapper .presentation {
+.whoAmI .presentation {
   margin: 5% 0;
 }
 
-.container .wrapper .presentation hr {
+.whoAmI .presentation hr {
   margin: 5% 0;
 }
 
-.container .wrapper .core .left-text {
+.whoAmI .core .left-text {
   text-align: center;
 }
 
-.container .wrapper .core .left-text p {
+.whoAmI .core .left-text p {
   font-size: 0.9em;
 }
 
-.container .wrapper .core .linkedinPict {
+.whoAmI .core .linkedinPict {
   margin: 20px 0;
   text-align: center;
 }
 
-.container .wrapper .core .linkedinPict img {
+.whoAmI .core .linkedinPict img {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
 }
 
-.container .wrapper .core .right-text {
+.whoAmI .core .right-text {
   text-align: center;
 }
 
-.container .wrapper .core .right-text h4 {
+.whoAmI .core .right-text h4 {
   color: RGBA(136, 186, 186, 0.6);
 }
 
-.container .wrapper .core .right-text .text-margin {
+.whoAmI .core .right-text .text-margin {
   margin: 10px 0;
 }
 
@@ -269,8 +197,9 @@ header .container nav .hamburger .menu {
 }
 
 .resume {
+  width: 70vw;
+  margin: 0 auto;
   min-height: 100vh;
-  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,7 +225,12 @@ header .container nav .hamburger .menu {
   font-size: 0.66em;
 }
 
-.allPictures {
+.templates {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.templates .allPictures {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,12 +239,12 @@ header .container nav .hamburger .menu {
   margin-bottom: 10px;
 }
 
-.allPictures .box {
+.templates .allPictures .box {
   margin: 0 auto;
   overflow: hidden;
 }
 
-.allPictures .box .imgOfHead {
+.templates .allPictures .box .imgOfHead {
   padding: 2%;
   max-width: 100%;
   height: auto;
@@ -320,32 +254,19 @@ header .container nav .hamburger .menu {
   transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
-.allPictures .box:hover img {
+.templates .allPictures .box:hover img {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.container {
-  max-width: 70vw;
+.formWrapper {
+  width: 70vw;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container .formWrapper {
   height: 100vh;
   margin: 0 auto;
 }
 
-.container .formWrapper form {
+.formWrapper form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +276,7 @@ header .container nav .hamburger .menu {
           flex-direction: column;
 }
 
-.container .formWrapper form .submit {
+.formWrapper form .submit {
   max-width: 50%;
   margin: 5% auto;
 }
