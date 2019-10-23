@@ -21,6 +21,10 @@ p {
   font-size: 1rem;
 }
 
+span {
+  font-size: 1rem;
+}
+
 .hero {
   background-image: url("../afbeeldingen/sky.jpg");
   background-attachment: fixed;
@@ -202,10 +206,11 @@ p {
 .whoAmI .core .right-text h4 {
   color: RGBA(136, 186, 186, 0.6);
   font-size: 1rem;
+  margin: 0;
 }
 
-.whoAmI .core .right-text .text-margin {
-  margin: 1% 0;
+.whoAmI .core .right-text .name {
+  margin-top: 2px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -356,6 +361,21 @@ p {
 
 .resume li .textOpmaak {
   font-size: 0.66em;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .skillset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 33%;
+  }
 }
 
 .parallax1 {

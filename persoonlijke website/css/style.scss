@@ -128,7 +128,6 @@ p{
            }
         }
         .core{
-
             .left-text{
                 text-align: center;
                 p{
@@ -149,9 +148,10 @@ p{
                 h4{
                     color: RGBA(136,186,186, 0.6);
                     font-size: 1rem;
+                    margin: 0;
                 }
-                .text-margin{
-                    margin: 1% 0;
+                .name{
+                    margin-top: 2px;
                 }
             }
         }
@@ -269,6 +269,20 @@ p{
         }
     }
 }
+
+//Media-query voor resume mobile landscape
+@media (min-width: 481px) and (max-width: 767px) {
+    .skillset{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 33%;
+        .span{
+            font-size: 8px;
+        }
+    }   
+    .skillsDiv    
+  }
 
 .parallax1{
     background-image: url('../afbeeldingen/squares.jpg');
