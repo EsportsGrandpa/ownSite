@@ -5,15 +5,20 @@
 }
 
 h1 {
-  margin: 0.33em 0;
+  margin: 0.33rem 0;
   text-align: center;
+  font-size: 1.5rem;
   color: RGBA(186, 136, 136, 0.5);
 }
 
 h3 {
   text-align: center;
-  font-size: 1em;
+  font-size: 1rem;
   color: RGBA(136, 186, 186, 0.6);
+}
+
+p {
+  font-size: 1rem;
 }
 
 .hero {
@@ -56,7 +61,7 @@ h3 {
 }
 
 .welcome h2 {
-  font-size: 1.33em;
+  font-size: 1.33rem;
   text-align: center;
 }
 
@@ -70,6 +75,7 @@ h3 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  max-height: 5vh;
 }
 
 .hamburgerMenu .hamburger {
@@ -150,7 +156,8 @@ h3 {
 .whoAmI {
   width: 70vw;
   margin: 0 auto;
-  min-height: 100vh;
+  max-height: 110vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +181,7 @@ h3 {
 }
 
 .whoAmI .core .left-text p {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .whoAmI .core .linkedinPict {
@@ -194,10 +201,85 @@ h3 {
 
 .whoAmI .core .right-text h4 {
   color: RGBA(136, 186, 186, 0.6);
+  font-size: 1rem;
 }
 
 .whoAmI .core .right-text .text-margin {
   margin: 1% 0;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .core {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .core .left-text {
+    width: 33%;
+  }
+  .core .linkedinPict {
+    width: 33%;
+    padding: 0 2%;
+  }
+  .core .linkedinPict img {
+    min-width: 90%;
+  }
+  .core .right-text {
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .core {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .core .left-text {
+    display: none;
+  }
+  .core .mobile-visible {
+    width: 33%;
+    display: block;
+    text-align: center;
+  }
+  .core .linkedinPict {
+    width: 33%;
+    padding: 0 2%;
+  }
+  .core .linkedinPict img {
+    min-width: 90%;
+  }
+  .core .right-text {
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+  }
 }
 
 @media screen and (max-width: 1223px) {
@@ -250,7 +332,7 @@ h3 {
 .resume {
   width: 70vw;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,6 +369,7 @@ h3 {
 .templates {
   width: 70vw;
   margin: 0 auto;
+  max-height: 100vh;
 }
 
 .templates .allPictures {
@@ -299,13 +382,19 @@ h3 {
 }
 
 .templates .allPictures .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .templates .allPictures .box .imgOfHead {
   padding: 2%;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;

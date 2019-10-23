@@ -10,15 +10,20 @@
 }
 
 h1{
-    margin: 0.33em 0;
+    margin: 0.33rem 0;
     text-align: center;
+    font-size: 1.5rem;
     color: RGBA(186,136,136, 0.5);
 }
 
 h3{
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
     color: RGBA(136,186,186, 0.6);
+}
+
+p{
+    font-size: 1rem;
 }
 
 .hero{
@@ -43,25 +48,25 @@ h3{
         text-transform: uppercase;
     }
     h2{
-        font-size: 1.33em;
+        font-size: 1.33rem;
         text-align: center;
     }
 } 
 
 .hamburgerMenu{
-   display: flex;
-   justify-content: flex-end;
-   position: sticky;
-   top: 0;
-    .hamburger{
-        margin-right: 5%;
-        margin-top: 5%;
-        text-decoration: none;
-        color: #000000;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    max-height: 5vh;
+     .hamburger{
+         margin-right: 5%;
+         margin-top: 5%;
+         text-decoration: none;
+         color: #000000;
     } 
 }
    
-
 .navbar-side{
     display: flex;
     flex-direction: column;
@@ -111,44 +116,104 @@ h3{
 
 .whoAmI{
     @include container;
-    min-height: 100vh;
+    max-height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    .presentation{
-        margin: 3% 0;
-        hr{
-            margin: 5% 0;
-       }
-    }
-    .core{
-        .left-text{
-            text-align: center;
-            p{
-                font-size: 0.9em;
+        .presentation{
+            margin: 3% 0;
+            hr{
+                margin: 5% 0;
+           }
+        }
+        .core{
+
+            .left-text{
+                text-align: center;
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+            .linkedinPict{
+                margin: 0 auto;
+                text-align: center;
+                img{
+                    border-radius: 50%;
+                    max-width: 50%;
+                    height: auto;
+                }
+            }
+            .right-text{
+                text-align: center;
+                h4{
+                    color: RGBA(136,186,186, 0.6);
+                    font-size: 1rem;
+                }
+                .text-margin{
+                    margin: 1% 0;
+                }
             }
         }
+    }  
+
+//Media-query voor whoAmI mobile landscape
+@media (min-width: 481px) and (max-width: 767px) {
+    .core{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        .left-text{
+            width: 33%;
+        }
         .linkedinPict{
-            margin: 0 auto;
-            text-align: center;
+            width: 33%;
+            padding: 0 2%;
             img{
-                border-radius: 50%;
-                max-width: 50%;
-                height: auto;
+                min-width: 90%;
             }
         }
         .right-text{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+    }       
+  }
+
+//Media-query voor whoAmI tablets
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .core{
+        display: flex;
+        flex-direction: row;
+        .left-text{
+            display: none;
+        }
+        .mobile-visible{
+            width: 33%;
+            display: block;
             text-align: center;
-            h4{
-                color: RGBA(136,186,186, 0.6);
-            }
-            .text-margin{
-                margin: 1% 0;
+        }
+        .linkedinPict{
+            width: 33%;
+            padding: 0 2%;
+
+            img{
+                min-width: 90%;
             }
         }
-    }
-}
+        .right-text{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+    } 
+    
+  }
 
+//Media-query voor whoAmI Desktop
 @media screen and (max-width : 1223px){
     .left-text{
         display: block;
@@ -188,7 +253,7 @@ h3{
 
 .resume{
     @include container;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     li{
@@ -215,16 +280,19 @@ h3{
 
 .templates{
     @include container;
+    max-height: 100vh;
     .allPictures{
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 10px;
         .box{
+            display: flex;
+            justify-content: center;
             margin: 0 auto;
             overflow: hidden;
             .imgOfHead{
                 padding: 2%;
-                max-width: 100%;
+                max-width: 50%;
                 height: auto;
                 transition: transform .5s ease;
             }
