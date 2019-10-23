@@ -227,6 +227,14 @@ p{
     }       
 }
 
+//Media-query voor whoAmI Desktop
+@media screen and (min-width : 1224px){
+    .skillset{
+        width: 50%;
+        margin: 0 auto;
+    }   
+}
+
 .parallax1{
     background-image: url('../afbeeldingen/squares.jpg');
     background-attachment: fixed;
@@ -239,10 +247,9 @@ p{
     @include container;
     min-height: 100vh;
     .allPictures{
-        height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         margin-bottom: 10px;
         .box{
             display: flex;
@@ -252,13 +259,13 @@ p{
             overflow: hidden;
             .imgOfHead{
                 padding: 2%;
-                max-width: 50%;
+                max-width: 75%;
                 height: auto;
                 transition: transform .5s ease;
             }
         }
         .box:hover img{
-            transform: scale(1.5);
+            transform: scale(1.2);
         }
     }
 }

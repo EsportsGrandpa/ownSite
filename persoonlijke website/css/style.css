@@ -304,6 +304,13 @@ p {
   }
 }
 
+@media screen and (min-width: 1224px) {
+  .skillset {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .parallax1 {
   background-image: url("../afbeeldingen/squares.jpg");
   background-attachment: fixed;
@@ -319,7 +326,7 @@ p {
 }
 
 .templates .allPictures {
-  height: 100vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,8 +334,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
@@ -347,7 +352,7 @@ p {
 
 .templates .allPictures .box .imgOfHead {
   padding: 2%;
-  max-width: 50%;
+  max-width: 75%;
   height: auto;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
@@ -356,8 +361,8 @@ p {
 }
 
 .templates .allPictures .box:hover img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .parallax2 {
