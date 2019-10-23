@@ -21,10 +21,6 @@ p {
   font-size: 1rem;
 }
 
-span {
-  font-size: 1rem;
-}
-
 .hero {
   background-image: url("../afbeeldingen/sky.jpg");
   background-attachment: fixed;
@@ -160,8 +156,7 @@ span {
 .whoAmI {
   width: 70vw;
   margin: 0 auto;
-  max-height: 110vh;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,80 +206,6 @@ span {
 
 .whoAmI .core .right-text .name {
   margin-top: 2px;
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .core {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .core .left-text {
-    width: 33%;
-  }
-  .core .linkedinPict {
-    width: 33%;
-    padding: 0 2%;
-  }
-  .core .linkedinPict img {
-    min-width: 90%;
-  }
-  .core .right-text {
-    width: 33%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: right;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .core {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .core .left-text {
-    display: none;
-  }
-  .core .mobile-visible {
-    width: 33%;
-    display: block;
-    text-align: center;
-  }
-  .core .linkedinPict {
-    width: 33%;
-    padding: 0 2%;
-  }
-  .core .linkedinPict img {
-    min-width: 90%;
-  }
-  .core .right-text {
-    width: 33%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: right;
-  }
 }
 
 @media screen and (max-width: 1223px) {
@@ -337,7 +258,7 @@ span {
 .resume {
   width: 70vw;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,34 +268,39 @@ span {
           flex-direction: column;
 }
 
-.resume li {
+.resume .skillsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.resume .skillsDiv li {
   list-style-type: none;
-}
-
-.resume li .skill-score {
-  float: right;
-}
-
-.resume li .langGrade {
-  float: right;
-}
-
-.resume li .textOpmaak {
-  font-size: 0.66em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .skillset {
+  .skillsDiv {
+    height: 90vh;
+  }
+  .skillsDiv li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 33%;
+  }
+  .skillsDiv span {
+    font-size: 0.7rem;
   }
 }
 
@@ -389,13 +315,18 @@ span {
 .templates {
   width: 70vw;
   margin: 0 auto;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .templates .allPictures {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 10px;
@@ -405,6 +336,8 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

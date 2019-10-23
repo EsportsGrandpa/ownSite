@@ -116,8 +116,7 @@ p{
 
 .whoAmI{
     @include container;
-    max-height: 110vh;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -157,61 +156,6 @@ p{
         }
     }  
 
-//Media-query voor whoAmI mobile landscape
-@media (min-width: 481px) and (max-width: 767px) {
-    .core{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        .left-text{
-            width: 33%;
-        }
-        .linkedinPict{
-            width: 33%;
-            padding: 0 2%;
-            img{
-                min-width: 90%;
-            }
-        }
-        .right-text{
-            width: 33%;
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-        }
-    }       
-  }
-
-//Media-query voor whoAmI tablets
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .core{
-        display: flex;
-        flex-direction: row;
-        .left-text{
-            display: none;
-        }
-        .mobile-visible{
-            width: 33%;
-            display: block;
-            text-align: center;
-        }
-        .linkedinPict{
-            width: 33%;
-            padding: 0 2%;
-
-            img{
-                min-width: 90%;
-            }
-        }
-        .right-text{
-            width: 33%;
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-        }
-    } 
-    
-  }
 
 //Media-query voor whoAmI Desktop
 @media screen and (max-width : 1223px){
@@ -253,36 +197,35 @@ p{
 
 .resume{
     @include container;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    li{
-        list-style-type: none;
-        .skill-score{
-            float: right;
-        }
-        .langGrade{
-            float: right;
-        }
-        .textOpmaak{
-            font-size: 0.66em;
+    .skillsDiv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        li{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+
         }
     }
+    
 }
 
 //Media-query voor resume mobile landscape
 @media (min-width: 481px) and (max-width: 767px) {
-    .skillset{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 33%;
-        .span{
-            font-size: 8px;
-        }
-    }   
-    .skillsDiv    
-  }
+     .skillsDiv{
+         height: 90vh;
+         li{
+            display: flex;
+         }
+        span{
+            font-size: 0.7rem;
+        } 
+    }       
+}
 
 .parallax1{
     background-image: url('../afbeeldingen/squares.jpg');
@@ -294,13 +237,16 @@ p{
 
 .templates{
     @include container;
-    max-height: 100vh;
+    min-height: 100vh;
     .allPictures{
+        height: 100vh;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         margin-bottom: 10px;
         .box{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             margin: 0 auto;
             overflow: hidden;
